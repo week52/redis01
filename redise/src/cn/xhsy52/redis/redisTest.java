@@ -17,6 +17,9 @@ public class redisTest {
         Jedis jedis=new Jedis("localhost",6379);
         //2.操作
         jedis.set("username","xiaoxin");
+            //获取
+        String username = jedis.get("username");
+        System.out.println(username);
         //3.关闭连接
         jedis.close();
     }
